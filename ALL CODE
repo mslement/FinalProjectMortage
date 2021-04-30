@@ -1,0 +1,29 @@
+#Down payment percentage
+downPayment = 5275
+price = 105500
+'Percentage of Down Payment: {:.2%}'.format(downPayment/price)
+print “Note: Do not include a mortgage insurance payment if percentage is at or above 20.00%”
+
+#Define function for monthly payment of loan with interest rate based on a 30 year loan and subtract down payment
+from math import *
+
+def loanPayment():
+  p = 105500		#p = price
+  dp = 5275.00		#dp = down payment
+  lp = p - dp		#lp = loan price (100225)
+  loan = (lp/360) * 1.0024916		#loan/360 months x    monthly interest
+  print(“Your estimated monthly payment is: “)
+  return loan
+  
+#Calculate equation
+loanPaymentEquation(m, p, r, n):
+  m = p * [ r*((1+r)**n) / ((1+r)**n)) - 1]
+  return m
+  
+#Calculate added fees (Ex. HOA)
+### from math import *
+fees = fsum([75.00, 350.00, 30.07 , 126.20])     #math.fsum
+
+#Final monthly payment
+mp = loan + fees    #279.10 + 581.27
+print(“Your estimated monthly payment is: “, mp)
